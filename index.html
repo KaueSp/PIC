@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventilux</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar fixa que desce ao rolar -->
+        <nav class="fixed-navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="#">LOGO</a>
+                </div>
+                <ul class="navbar-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">TELHAS</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Agrupamento da navbar inicial e do carrossel -->
+    <div class="intro-section">
+        <!-- Navbar inicial -->
+        <nav class="static-navbar">
+            <div class="navbar-container">
+                <div class="logo">
+                    <a href="#">LOGO</a>
+                </div>
+                <ul class="navbar-links">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">TELHAS</a></li>
+                    <li><a href="#">SOBRE NÓS</a></li>
+                    <li><a href="#">CONTATO</a></li>
+                </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <!-- Carrossel -->
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item"><img src="https://via.placeholder.com/800x400?text=Imagem+1" alt="Imagem 1"></div>
+                <div class="carousel-item"><img src="https://via.placeholder.com/800x400?text=Imagem+2" alt="Imagem 2"></div>
+                <div class="carousel-item"><img src="https://via.placeholder.com/800x400?text=Imagem+3" alt="Imagem 3"></div>
+            </div>
+            <button class="prev" onclick="moveCarousel(-1)">&#10094;</button>
+            <button class="next" onclick="moveCarousel(1)">&#10095;</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <section class="product-section">
+        <div class="product-container">
+            <div class="product-item">
+                <div class="icon-box">
+                    <img src="https://via.placeholder.com/50" alt="Telhas Metálicas">
+                    <p>Telhas Metálicas</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="icon-box">
+                    <img src="https://via.placeholder.com/50" alt="Telhas Translúcidas">
+                    <p>Telhas Translúcidas</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="icon-box">
+                    <img src="https://via.placeholder.com/50" alt="Perfis">
+                    <p>Perfis</p>
+                </div>
+            </div>
+            <div class="product-item">
+                <div class="icon-box">
+                    <img src="https://via.placeholder.com/50" alt="Parafusos">
+                    <p>Parafusos</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="features-container">
+            <div class="feature-item">
+                <i class="icon-item"></i>
+                <p>Qualidade Garantida</p>
+            </div>
+            <div class="feature-item">
+                <i class="icon-item"></i>
+                <p>Entrega no Prazo</p>
+            </div>
+            <div class="feature-item">
+                <i class="icon-item"></i>
+                <p>Atendimento Personalizado</p>
+            </div>
+        </div>
+    
+        <hr class="divider">
+    
+        <div class="text-container">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In faucibus imperdiet nunc...</p>
+            <button class="learn-more-btn">Saiba mais</button>
+        </div>
+    </section>
+    
+</body>
+</html>
