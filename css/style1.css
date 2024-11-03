@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* <-------============NAVBAR============-------> */
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo a {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links li {
+    display: inline;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+.navbar-links a.active,
+.navbar-links a:hover {
+    color: #D9A01F;
+}
+
+.navbar-links a.active::after,
+.navbar-links a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #D9A01F;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+/* <-------============NAVBAR ESTÁTICA (SEGUNDA NAVBAR) ============-------> */
+/* Efeito da navbar */
+.intro-section {
+    position: relative;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fixed-navbar {
+    position: fixed;
+    top: -80px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #1D3557; /*COR DA NAVBAR*/
+    transition: top 0.1s ease-in-out;
+    z-index: 1000;
+}
+.fixed-navbar.show {
+    top: 0; /* Desce para o topo quando a rolagem ultrapassa 50px */
+}
+
+/* <-------============NAVBAR FIXA (PRIMEIRA NAVBAR)============-------> */
+.static-navbar {
+    background-color: #1D3557;
+    padding: 10px 20px;
+    position: relative;
+    width: 100%;
+}
+
+
+/* <-------===========FOOTER=============-------> */
+
+footer {
+    background-color: #1d2533;
+    color: white;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espaçamento entre logo e contato */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 50px;
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.footer-contact h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.footer-contact img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.footer-copyright {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #aaa;
+    padding-top: 10px;
+}

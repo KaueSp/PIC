@@ -1,0 +1,38 @@
+
+
+-- Criar o banco de dados
+CREATE DATABASE IF NOT EXISTS admin_products_db;
+USE admin_products_db;
+
+-- Criar a tabela de usuários
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL, -- Use hashing em vez de texto simples em produção
+    email VARCHAR(100) NOT NULL UNIQUE,
+    role ENUM('admin', 'user') DEFAULT 'user',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Criar a tabela de produtos
+CREATE TABLE IF NOT EXISTS products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    description TEXT,
+    category JSON, -- Alterado para JSON
+    image_url VARCHAR(255),
+    created_by INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (created_by) REFERENCES users(id) ON DELETE SET NULL
+);
+
+
+SELECT * FROM admin_products_db.products;
+
+productsALTER TABLE products MODIFY category JSON CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Configura o banco de dados para usar UTF-8
+ALTER DATABASE admin_products_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Configura a tabela para usar UTF-8
+ALTER TABLE products CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

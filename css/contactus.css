@@ -1,0 +1,106 @@
+
+/* <-------=============CONTATO=============-------> */
+.contact-section {
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    background-color: #1d2533;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+    flex: 1;
+    color: white;
+    padding-right: 50px;
+}
+
+.contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact-info img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.contact-form {
+    flex: 1;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    font-size: 14px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.contact-form input {
+    height: 40px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #004494;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .contact-form form {
+        width: 100%;
+    }
+}
